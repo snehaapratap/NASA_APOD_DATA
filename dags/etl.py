@@ -6,7 +6,6 @@ from airflow.utils.dates import days_ago
 import json
 
 
-## Define the DAG
 with DAG(
     dag_id='nasa_apod_postgres',
     start_date=days_ago(1),

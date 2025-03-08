@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nasa-apod-service
+  namespace: nasa-apod
+spec:
+  selector:
+    app: nasa-apod
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP

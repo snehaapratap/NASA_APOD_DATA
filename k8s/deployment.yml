@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nasa-apod-deployment
+  labels:
+    app: nasa-apod
+  namespace: nasa-apod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nasa-apod
+  template:
+    metadata:
+      labels:
+        app: nasa-apod
+    spec:
+      containers:
+      - name: nasa-apos
+        image: snehaapratap/nasa-apod-k8s
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          

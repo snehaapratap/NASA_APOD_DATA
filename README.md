@@ -1,17 +1,8 @@
 # NASA_APOD_DATA 🚀
 
+
 This project houses the code and configuration for an ETL (Extract, Transform, Load) pipeline designed to fetch NASA's Astronomy Picture of the Day (APOD) data and store it in a PostgreSQL database. The pipeline is orchestrated using Apache Airflow, ensuring seamless data flow and scheduling. Additionally, the setup is containerized with Docker and includes Kubernetes configurations for scalable deployment.
 
-## Table of Contents
-
-- [Features](#features) ✨
-- [Prerequisites](#prerequisites) 🛠️
-- [Installation](#installation) 💻
-- [Configuration](#configuration) ⚙️
-- [Usage](#usage) 🔧
-- [Testing](#testing) 🧪
-- [Deployment](#deployment) 📦
-- [Contributing](#contributing) 🤝
 
 ## Features ✨
 
